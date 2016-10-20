@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>shareCar</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style type="text/css">
+			body{
+				padding: 15px;
+				font-size: 14px;
+			}
+			li{
+				border-bottom:1px solid #dddddd;
+				height: 40px;
+				line-height: 40px;
+			}
+
+			li span{
+				float:right;
+			}
+			dl dd{
+				float: left;
+			}
+			dl dd:nth-child(1){
+				height: 50px;
+				line-height: 50px;
+				width: 10%;
+			}
+			dl dd:nth-child(3){
+				height: 50px;
+				line-height: 50px;
+				width: 20%;
+				float: right;
+			}
+			dl dd:nth-child(2){
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				width: 70%;
+			}
+			dl button{
+				float: right;
+				width: 80px;
+				height: 40px;
+				background-color:yellow ;
+				text-align: center;
+				margin-top: 5px;
+				line-height: 40px;
+				color: white;
+				border:0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1 style="font-size: 15px;">
+			大众POLO
+		</h1>
+		
+		<ul>
+	
+		
+		<li>
+			2016款 1.4L 手动风尚型     <span>指导价 7.59万/<span style="color: red;">下1.3万</span></span>
+		</li>
+		<li>
+			裸车价   <span style="color: red;">6.29万</span>
+		</li>
+		
+		<li>
+			货源状态 <span>现货</span>
+		</li>
+		<li>
+			提车时间 <span> 7天</span>
+		</li>
+		<li>
+			手续时间 <span> 手续全随车发</span>
+		</li>
+		<li>
+			发布时间 <span>2016-06-12  12：00：00 </span>
+		</li>
+		<li style="height: 60px;">
+		<p style="height: 40px; line-height: 40px;">
+			可销地区
+		</p>
+		<p style="height: 20px; line-height: 20px;">
+			全国
+		</p>
+		</li>
+		</ul>
+		<p style="height: 40px; line-height: 40px;">
+			备注
+		</p>
+		<p style="height: 40px; line-height: 40px;">
+			西区车
+		</p>
+		<div style="text-align: center; margin-bottom: 30px;">
+			<h2>邓富芫</h2>
+			<p>广东易捷好车信息科技有限公司</p>
+			<p><span style="color: #DDDDDD;">联系电话:&nbsp;</span> <a href="tel:18820059569" style="color: blue;">18820059569</a></p>
+			<p style="color: #DDDDDD;">更新时间 2016.10.16 12:30</p>
+		</div>
+		<dl>
+			<dd><img src="img/a2.jpg" alt="" style="width:50px;height: 50px;" /></dd>
+			<dd>易捷好车平台只做真实好车源</dd>
+			<dd><button>下载APP</button></dd>
+		</dl>
+
+	</body>
+	<script type="text/javascript"> 
+		/* 
+		* 智能机浏览器版本信息: 
+		*/ 
+		var browser={ 
+		versions:function(){ 
+		var u = navigator.userAgent, app = navigator.appVersion; 
+		return {//移动终端浏览器版本信息 
+		trident: u.indexOf('Trident') > -1, //IE内核 
+		presto: u.indexOf('Presto') > -1, //opera内核 
+		webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核 
+		gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核 
+		mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端 
+		ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端 
+		android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器 
+		iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQ HD浏览器 
+		iPad: u.indexOf('iPad') > -1, //是否iPad 
+		webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部 
+		}; 
+		}(), 
+		language:(navigator.browserLanguage || navigator.language).toLowerCase() 
+		} 
+		 
+//		document.writeln("语言版本: "+browser.language); 
+//		document.writeln(" 是否为移动终端: "+browser.versions.mobile); 
+//		document.writeln(" ios终端: "+browser.versions.ios); 
+//		document.writeln(" android终端: "+browser.versions.android); 
+//		document.writeln(" 是否为iPhone: "+browser.versions.iPhone); 
+//		document.writeln(" 是否iPad: "+browser.versions.iPad);
+//		document.writeln(navigator.userAgent); 
+//		alert(browser.language)
+//		alert(browser.versions.mobile)
+//		window.location.href="你所要跳转的页面";
+		var button = document.querySelector("button")
+		button.onclick=function(){
+			if(browser.versions.ios){
+						window.location.href="https://itunes.apple.com/cn/app/id1146783996";
+			}
+			if(browser.versions.android){
+						window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=cn.ejauto.app";
+			}
+		}
+	</script>
+</html>
