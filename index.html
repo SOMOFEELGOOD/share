@@ -141,15 +141,25 @@
 //		alert(browser.language)
 //		alert(browser.versions.mobile)
 //		window.location.href="你所要跳转的页面";
+		var ua = navigator.userAgent.toLowerCase(); 
 		var button = document.querySelector("button")
 		button.onclick=function(){
 			if(browser.versions.ios){
-						window.location.href="https://itunes.apple.com/cn/app/id1146783996";
-						alert("您是苹果用户，请点击右上角，用浏览器打开")
+//			辨别是否在微信浏览器中
+			if(ua.match(/MicroMessenger/i)=="micromessenger") { 
+								    	    window.location.href="https://itunes.apple.com/cn/app/id1146783996";
+								     } else { 
+								       alert("您是苹果用户，请点击右上角，用浏览器打开，再点击下载")
+								    } 		
 			}
 			if(browser.versions.android){
 						window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=cn.ejauto.app";
 			}
 		}
+
+
+
+
+
 	</script>
 </html>
